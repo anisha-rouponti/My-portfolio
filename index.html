@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Anisha Islam Rouponti | Portfolio</title>
@@ -12,8 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-/* ================= BASIC ================= */
 
 *{
     margin:0;
@@ -28,21 +23,20 @@ html{
 body{
     font-family:'Poppins',sans-serif;
     background:#080812;
-    color:white;
+    color:#fff;
     overflow-x:hidden;
 }
 
-
-/* ================= BACKGROUND GLOW ================= */
+/* Background */
 
 body::before{
     content:"";
     position:fixed;
-    width:350px;
-    height:350px;
+    width:330px;
+    height:330px;
     background:#8b5cf6;
     filter:blur(150px);
-    opacity:.18;
+    opacity:.16;
     top:-100px;
     left:-100px;
     z-index:-1;
@@ -51,10 +45,10 @@ body::before{
 body::after{
     content:"";
     position:fixed;
-    width:350px;
-    height:350px;
+    width:330px;
+    height:330px;
     background:#ec4899;
-    filter:blur(160px);
+    filter:blur(150px);
     opacity:.12;
     right:-100px;
     bottom:-100px;
@@ -62,15 +56,14 @@ body::after{
 }
 
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-
-    padding:18px 7%;
+    padding:17px 7%;
 
     display:flex;
     justify-content:space-between;
@@ -81,26 +74,23 @@ nav{
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
-    z-index:1000;
+    z-index:999;
 }
 
 .logo{
-    font-size:24px;
+    font-size:23px;
     font-weight:800;
 }
 
 .logo span{
-    color:#a855f7;
+    color:#c084fc;
 }
 
 nav a{
     color:#ddd;
     text-decoration:none;
-
-    margin-left:18px;
-
     font-size:12px;
-
+    margin-left:18px;
     transition:.3s;
 }
 
@@ -109,314 +99,209 @@ nav a:hover{
 }
 
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
-
     min-height:100vh;
-
-    padding:130px 8% 70px;
+    padding:125px 8% 70px;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
-    gap:40px;
+    gap:45px;
 }
 
 .hero-text{
     max-width:650px;
-
     animation:fadeUp 1s ease;
 }
 
-.small-title{
-
+.welcome{
     color:#c084fc;
-
     letter-spacing:4px;
-
     font-size:11px;
-
     font-weight:600;
-
     margin-bottom:15px;
 }
 
 .hero h1{
-
-    font-size:clamp(45px,10vw,78px);
-
+    font-size:clamp(42px,9vw,78px);
     line-height:1.05;
-
     font-weight:800;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         90deg,
-        #ffffff,
+        #fff,
         #c084fc,
         #f472b6
     );
 
     -webkit-background-clip:text;
-
     -webkit-text-fill-color:transparent;
 }
 
 .hero h2{
-
-    margin-top:18px;
-
-    font-size:18px;
-
-    color:#d1d1dc;
-
+    color:#d2d2df;
+    font-size:19px;
     font-weight:500;
+    margin-top:18px;
 }
 
 .hero p{
-
-    margin-top:18px;
-
     color:#9999aa;
-
-    line-height:1.8;
-
     font-size:14px;
+    line-height:1.9;
+    margin-top:18px;
+    max-width:570px;
 }
 
 .buttons{
-
     margin-top:30px;
-
     display:flex;
-
-    gap:15px;
-
+    gap:14px;
     flex-wrap:wrap;
 }
 
 .btn{
-
     display:inline-block;
-
     text-decoration:none;
+    color:#fff;
 
-    padding:13px 25px;
-
+    padding:13px 24px;
     border-radius:30px;
 
-    color:white;
-
     font-size:13px;
-
     font-weight:600;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #7c3aed,
         #ec4899
     );
 
-    box-shadow:
-    0 10px 30px rgba(168,85,247,.25);
+    box-shadow:0 10px 30px rgba(139,92,246,.25);
 
     transition:.3s;
 }
 
 .btn:hover{
-
     transform:translateY(-4px);
-
-    box-shadow:
-    0 15px 35px rgba(168,85,247,.4);
+    box-shadow:0 15px 35px rgba(139,92,246,.4);
 }
 
-.btn-outline{
-
+.outline{
     background:transparent;
-
     border:1px solid #8b5cf6;
-
     box-shadow:none;
 }
 
 
-/* ================= PROFILE ================= */
+/* PROFILE PHOTO */
 
-.profile{
+.photo{
+    width:300px;
+    height:300px;
+    min-width:300px;
 
-    width:290px;
-
-    height:290px;
-
-    min-width:290px;
-
+    padding:7px;
     border-radius:50%;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:
-
-    linear-gradient(
-        #0b0b16,
-        #0b0b16
-    ) padding-box,
-
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #8b5cf6,
         #ec4899,
         #06b6d4
-    ) border-box;
+    );
 
-    border:5px solid transparent;
-
-    box-shadow:
-    0 0 70px rgba(139,92,246,.25);
+    box-shadow:0 0 70px rgba(139,92,246,.25);
 
     animation:float 4s ease-in-out infinite;
 }
 
-.profile-inner{
+.photo img{
+    width:100%;
+    height:100%;
 
-    width:220px;
+    display:block;
 
-    height:220px;
+    object-fit:cover;
+    object-position:center;
 
     border-radius:50%;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:
-
-    linear-gradient(
-        135deg,
-        #7c3aed,
-        #db2777
-    );
-
-    box-shadow:
-    0 0 60px rgba(236,72,153,.3);
-}
-
-.profile-inner span{
-
-    font-size:55px;
-
-    font-weight:800;
-
-    text-align:center;
+    border:5px solid #0b0b16;
 }
 
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 
 section{
-
-    padding:100px 8%;
+    padding:95px 8%;
 }
 
-.section-title{
-
+.heading{
     text-align:center;
-
-    margin-bottom:50px;
+    margin-bottom:48px;
 }
 
-.section-title small{
-
+.heading small{
     color:#c084fc;
-
     letter-spacing:4px;
-
     font-size:11px;
 }
 
-.section-title h2{
-
+.heading h2{
     font-size:38px;
+    margin-top:7px;
+}
 
+.heading p{
+    color:#858596;
+    font-size:13px;
     margin-top:8px;
 }
 
-.section-title p{
 
-    color:#888898;
-
-    font-size:13px;
-
-    margin-top:10px;
-}
-
-
-/* ================= ABOUT ================= */
+/* ABOUT */
 
 .about{
-
     max-width:1000px;
-
     margin:auto;
 
-    display:grid;
+    padding:38px;
 
-    grid-template-columns:120px 1fr;
-
+    display:flex;
+    align-items:center;
     gap:30px;
 
-    padding:40px;
+    background:rgba(255,255,255,.035);
 
-    background:
-    rgba(255,255,255,.035);
-
-    border:
-    1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:25px;
-
-    backdrop-filter:blur(10px);
 
     transition:.3s;
 }
 
 .about:hover{
-
     transform:translateY(-5px);
-
-    border-color:
-    rgba(192,132,252,.4);
+    border-color:rgba(192,132,252,.4);
 }
 
 .about-icon{
-
-    width:100px;
-
-    height:100px;
+    width:95px;
+    height:95px;
+    min-width:95px;
 
     border-radius:25px;
 
     display:flex;
-
+    justify-content:center;
     align-items:center;
 
-    justify-content:center;
+    font-size:42px;
 
-    font-size:45px;
-
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #7c3aed,
         #ec4899
@@ -424,49 +309,37 @@ section{
 }
 
 .about h3{
-
-    font-size:24px;
-
+    font-size:23px;
     margin-bottom:10px;
 }
 
 .about p{
-
     color:#9999aa;
-
     font-size:14px;
-
     line-height:1.8;
 }
 
 
-/* ================= SKILLS ================= */
+/* SKILLS */
 
 .skills{
-
     max-width:1000px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:18px;
 }
 
 .skill{
-
-    padding:28px 18px;
+    padding:27px 15px;
 
     text-align:center;
 
-    background:
-    rgba(255,255,255,.035);
+    background:rgba(255,255,255,.035);
 
-    border:
-    1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:20px;
 
@@ -474,82 +347,62 @@ section{
 }
 
 .skill:hover{
-
     transform:translateY(-8px);
-
     border-color:#a855f7;
 }
 
 .skill-icon{
-
     width:65px;
-
     height:65px;
 
     margin:auto;
 
     display:flex;
-
-    justify-content:center;
-
     align-items:center;
+    justify-content:center;
 
     border-radius:18px;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #7c3aed,
         #ec4899
     );
 
-    font-weight:700;
-
     font-size:14px;
+    font-weight:700;
 }
 
 .skill h3{
-
-    margin-top:15px;
-
+    margin-top:14px;
     font-size:17px;
 }
 
 .skill p{
-
-    margin-top:7px;
-
     color:#858596;
-
     font-size:12px;
+    margin-top:6px;
 }
 
 
-/* ================= PROJECTS ================= */
+/* PROJECTS */
 
 .projects{
-
     max-width:1050px;
-
     margin:auto;
 
     display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:20px;
 }
 
 .project{
-
     padding:30px;
 
-    background:
-    rgba(255,255,255,.035);
+    background:rgba(255,255,255,.035);
 
-    border:
-    1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
 
     border-radius:22px;
 
@@ -557,60 +410,44 @@ section{
 }
 
 .project:hover{
+    transform:translateY(-9px);
 
-    transform:translateY(-10px);
-
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.3);
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
 }
 
-.number{
-
+.project-number{
     color:#a855f7;
-
-    font-size:12px;
-
+    font-size:11px;
     font-weight:700;
+    letter-spacing:2px;
 }
 
 .project h3{
-
-    margin-top:20px;
-
-    font-size:20px;
+    margin-top:18px;
+    font-size:19px;
 }
 
 .project p{
-
     color:#8e8e9e;
-
     font-size:13px;
-
     line-height:1.7;
-
     margin:12px 0 20px;
 }
 
 .project a{
-
-    text-decoration:none;
-
     color:#c084fc;
-
+    text-decoration:none;
     font-size:13px;
-
     font-weight:600;
 }
 
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact{
-
     text-align:center;
 
     background:
-
     radial-gradient(
         circle at center,
         rgba(139,92,246,.18),
@@ -619,159 +456,120 @@ section{
 }
 
 .contact h2{
-
     font-size:40px;
-
-    margin:10px 0;
+    margin:8px 0;
 }
 
 .contact p{
-
     color:#9292a2;
-
     font-size:14px;
+    margin-bottom:27px;
+}
 
-    margin-bottom:30px;
+.email{
+    display:block;
+    margin-top:20px;
+    color:#c084fc;
+    text-decoration:none;
+    font-size:13px;
 }
 
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
-
     text-align:center;
-
     padding:35px 20px;
 
-    border-top:
-    1px solid rgba(255,255,255,.08);
+    border-top:1px solid rgba(255,255,255,.08);
 
     color:#777788;
-
     font-size:12px;
 }
 
 footer strong{
-
-    color:white;
-
+    color:#fff;
     font-size:18px;
 }
 
 footer span{
-
     color:#a855f7;
 }
 
 
-/* ================= ANIMATIONS ================= */
+/* ANIMATION */
 
 @keyframes fadeUp{
 
     from{
-
         opacity:0;
-
-        transform:
-        translateY(30px);
+        transform:translateY(30px);
     }
 
     to{
-
         opacity:1;
-
-        transform:
-        translateY(0);
+        transform:translateY(0);
     }
 }
 
 @keyframes float{
 
     0%,100%{
-
-        transform:
-        translateY(0);
+        transform:translateY(0);
     }
 
     50%{
-
-        transform:
-        translateY(-15px);
+        transform:translateY(-12px);
     }
 }
 
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:800px){
 
     nav{
-
-        padding:15px 5%;
+        padding:14px 4%;
+        flex-direction:column;
+        gap:9px;
     }
 
     nav a{
-
-        margin-left:6px;
-
         font-size:9px;
+        margin-left:5px;
     }
 
     .hero{
-
         flex-direction:column;
-
         text-align:center;
+        padding-top:145px;
+    }
 
-        padding-top:130px;
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .buttons{
-
         justify-content:center;
     }
 
-    .profile{
-
-        width:230px;
-
-        height:230px;
-
-        min-width:230px;
-    }
-
-    .profile-inner{
-
-        width:175px;
-
-        height:175px;
-    }
-
-    .profile-inner span{
-
-        font-size:45px;
+    .photo{
+        width:245px;
+        height:245px;
+        min-width:245px;
     }
 
     .about{
-
-        grid-template-columns:1fr;
-
+        flex-direction:column;
         text-align:center;
     }
 
-    .about-icon{
-
-        margin:auto;
-    }
-
     .skills{
-
-        grid-template-columns:
-        repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .projects{
-
         grid-template-columns:1fr;
     }
 }
@@ -780,63 +578,46 @@ footer span{
 @media(max-width:480px){
 
     .logo{
-
         font-size:20px;
     }
 
-    nav a{
-
-        font-size:8px;
-
-        margin-left:4px;
-    }
-
     .hero h1{
-
-        font-size:50px;
+        font-size:48px;
     }
 
     .hero h2{
-
         font-size:15px;
     }
 
     section{
-
         padding:75px 5%;
     }
 
-    .section-title h2{
-
-        font-size:32px;
+    .heading h2{
+        font-size:31px;
     }
 
     .skills{
-
-        grid-template-columns:
-        1fr 1fr;
+        grid-template-columns:1fr 1fr;
     }
 
     .skill{
-
-        padding:22px 10px;
+        padding:21px 9px;
     }
 
     .contact h2{
-
-        font-size:30px;
+        font-size:29px;
     }
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -847,13 +628,9 @@ footer span{
     <div>
 
         <a href="#home">Home</a>
-
         <a href="#about">About</a>
-
         <a href="#skills">Skills</a>
-
         <a href="#projects">Projects</a>
-
         <a href="#contact">Contact</a>
 
     </div>
@@ -861,14 +638,13 @@ footer span{
 </nav>
 
 
-
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
     <div class="hero-text">
 
-        <div class="small-title">
+        <div class="welcome">
             WELCOME TO MY PORTFOLIO
         </div>
 
@@ -878,14 +654,14 @@ footer span{
         </h1>
 
         <h2>
-            CSE Student
+            CSE Student • Web Developer
         </h2>
 
         <p>
             I am a Computer Science & Engineering student
             at CCN University of Science and Technology.
-            I am passionate about technology, web development
-            and creating beautiful digital experiences.
+            I am passionate about technology, web development,
+            programming and creating beautiful digital experiences.
         </p>
 
         <div class="buttons">
@@ -894,7 +670,7 @@ footer span{
                 Explore My Work →
             </a>
 
-            <a href="#contact" class="btn btn-outline">
+            <a href="#contact" class="btn outline">
                 Contact Me
             </a>
 
@@ -903,27 +679,25 @@ footer span{
     </div>
 
 
-    <div class="profile">
+    <!-- PHOTO -->
 
-        <div class="profile-inner">
+    <div class="photo">
 
-            <span>
-                AR
-            </span>
-
-        </div>
+        <img
+            src="profile.jpg"
+            alt="Anisha Islam Rouponti"
+        >
 
     </div>
 
 </section>
 
 
-
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 
 <section id="about">
 
-    <div class="section-title">
+    <div class="heading">
 
         <small>GET TO KNOW ME</small>
 
@@ -942,7 +716,6 @@ footer span{
             👩‍💻
         </div>
 
-
         <div>
 
             <h3>
@@ -950,26 +723,18 @@ footer span{
             </h3>
 
             <p>
-
-                I am a Computer Science & Engineering
-                student at
-                <strong>
-                    CCN University of Science and Technology
-                </strong>.
-
-                I enjoy programming, web development
-                and exploring new technologies.
-
+                I am a Computer Science & Engineering student
+                at <strong>CCN University of Science and Technology</strong>.
+                I enjoy programming, web development and learning
+                new technologies.
             </p>
 
             <br>
 
             <p>
-
-                I love learning new skills, creating projects
-                and turning ideas into useful and beautiful
-                digital experiences.
-
+                My goal is to continuously improve my technical
+                skills and create useful, creative and
+                user-friendly digital experiences.
             </p>
 
         </div>
@@ -979,19 +744,18 @@ footer span{
 </section>
 
 
-
-<!-- ================= SKILLS ================= -->
+<!-- SKILLS -->
 
 <section id="skills">
 
-    <div class="section-title">
+    <div class="heading">
 
-        <small>WHAT I KNOW</small>
+        <small>MY EXPERTISE</small>
 
         <h2>My Skills</h2>
 
         <p>
-            Technologies and tools I am learning
+            Technologies and concepts I am learning
         </p>
 
     </div>
@@ -1006,12 +770,10 @@ footer span{
                 HTML
             </div>
 
-            <h3>
-                HTML
-            </h3>
+            <h3>HTML</h3>
 
             <p>
-                Website structure
+                Web Structure
             </p>
 
         </div>
@@ -1023,12 +785,10 @@ footer span{
                 CSS
             </div>
 
-            <h3>
-                CSS
-            </h3>
+            <h3>CSS</h3>
 
             <p>
-                Modern web design
+                Web Design
             </p>
 
         </div>
@@ -1040,12 +800,10 @@ footer span{
                 C++
             </div>
 
-            <h3>
-                C++
-            </h3>
+            <h3>C++</h3>
 
             <p>
-                Programming & problem solving
+                Programming
             </p>
 
         </div>
@@ -1054,15 +812,13 @@ footer span{
         <div class="skill">
 
             <div class="skill-icon">
-                DB
+                SQL
             </div>
 
-            <h3>
-                Database
-            </h3>
+            <h3>Database</h3>
 
             <p>
-                SQL & database concepts
+                SQL & DBMS
             </p>
 
         </div>
@@ -1072,19 +828,18 @@ footer span{
 </section>
 
 
-
-<!-- ================= PROJECTS ================= -->
+<!-- PROJECTS -->
 
 <section id="projects">
 
-    <div class="section-title">
+    <div class="heading">
 
         <small>MY CREATIVE WORK</small>
 
         <h2>Featured Projects</h2>
 
         <p>
-            My academic and personal projects
+            Some of my academic projects
         </p>
 
     </div>
@@ -1095,7 +850,7 @@ footer span{
 
         <div class="project">
 
-            <div class="number">
+            <div class="project-number">
                 PROJECT 01
             </div>
 
@@ -1104,11 +859,8 @@ footer span{
             </h3>
 
             <p>
-
-                A database-based system designed
-                to manage student information
-                in an organized and efficient way.
-
+                A database-based project designed to manage
+                student information efficiently and systematically.
             </p>
 
             <a href="#">
@@ -1120,7 +872,7 @@ footer span{
 
         <div class="project">
 
-            <div class="number">
+            <div class="project-number">
                 PROJECT 02
             </div>
 
@@ -1129,11 +881,8 @@ footer span{
             </h3>
 
             <p>
-
-                A modern responsive portfolio website
-                created using HTML and CSS with
-                a clean user interface.
-
+                A modern responsive portfolio website created
+                using HTML and CSS with a clean interface.
             </p>
 
             <a href="#">
@@ -1145,7 +894,7 @@ footer span{
 
         <div class="project">
 
-            <div class="number">
+            <div class="project-number">
                 PROJECT 03
             </div>
 
@@ -1154,11 +903,8 @@ footer span{
             </h3>
 
             <p>
-
-                A simple university website concept
-                designed with a modern and
-                user-friendly interface.
-
+                A university website concept designed with
+                a modern and user-friendly interface.
             </p>
 
             <a href="#">
@@ -1172,27 +918,21 @@ footer span{
 </section>
 
 
-
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
-    <div class="section-title">
+    <div class="heading">
 
         <small>LET'S CONNECT</small>
 
-        <h2>
-            Let's Work Together
-        </h2>
+        <h2>Let's Work Together</h2>
 
     </div>
 
-
     <p>
-        Have an idea or project?
-        I'd love to hear from you.
+        Have an idea or project? I'd love to hear from you.
     </p>
-
 
     <a
         href="mailto:anishaislamrouponti@gmail.com"
@@ -1201,11 +941,17 @@ footer span{
         Say Hello ✉
     </a>
 
+    <a
+        href="mailto:anishaislamrouponti@gmail.com"
+        class="email"
+    >
+        anishaislamrouponti@gmail.com
+    </a>
+
 </section>
 
 
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1215,21 +961,14 @@ footer span{
 
     <br><br>
 
-    CSE Student —
-    CCN University of Science and Technology
+    CSE Student • CCN University of Science and Technology
 
     <br><br>
 
-    anishaislamrouponti@gmail.com
-
-    <br><br>
-
-    © 2026 Anisha Islam Rouponti.
-    All Rights Reserved.
+    © 2026 Anisha Islam Rouponti • All Rights Reserved
 
 </footer>
 
 
 </body>
-
 </html>
